@@ -5,14 +5,22 @@ import { createBrowserRouter } from "react-router-dom";
 
 const routes = [
   {
-    path: "/",
+    path: "/shop",
     element: <App />,
     children: [
       {
-        path: "/shop",
+        path: "/shop/main",
         element: (
           <Suspense fallback={"Загрузка..."}>
             <Shop />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/shop/second",
+        element: (
+          <Suspense fallback={"Загрузка..."}>
+            <div style={{ color: "green" }}>SECOND</div>
           </Suspense>
         ),
       },

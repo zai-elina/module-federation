@@ -18,6 +18,7 @@ export function buildPlugins(options: BuildOptions): Configuration["plugins"] {
     new HtmlWebpackPlugin({
       template: paths.html,
       favicon: path.resolve(paths.public, "favicon.ico"),
+      publicPath: "/", // место запроса статики
     }),
     // подменяем глобальые переменные в коде на переменные при сборке
     new DefinePlugin({
